@@ -42,7 +42,7 @@ Meal Mate is a class assignment for practice in using APIs in angular. We were t
 * Only uses Angular, no 3rd party libraries or frameworks
 * Must be useful with sufficient depth
 
-### The Idea
+## The Idea
 I chose to make a meal planning app that utilizes the Spoontacular food api. Spoontacular has a large API that has resources for ingredients, meals, recipes, etc. 
 
 The idea was to make a meal planner where users could search with the Spoontacular API for meals based on various filters. The user could then click on the a meal, view its information, and add it to their favorite meals. They could also assign meals for days of the week on their calendar or calculate things like the calories for a meal. 
