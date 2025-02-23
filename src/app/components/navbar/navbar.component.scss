@@ -1,0 +1,41 @@
+// *{
+//     font-family: ;
+// }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: #31312E;
+    color: white;
+  
+    &-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8BC34A;
+    }
+  
+    &-menu {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      margin-left: 15rem;
+      padding: 0;
+      flex-grow: 1;
+  
+      li {
+        margin-left: 4rem;
+        margin-right: 4rem;
+  
+        a {
+            font-size: 1.2rem;
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: #FFA07A;
+          }
+        }
+      }
+    }
+  }
