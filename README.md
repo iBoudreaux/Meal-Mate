@@ -1,5 +1,3 @@
-# Meal Mate
-
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
 
 ## Development server
@@ -27,9 +25,8 @@ ng generate --help
 ```
 
 
-# Meal Mate
 
-## About Meal Mate
+# About Meal Mate
 
 Meal Mate is a class assignment for practice in using APIs in angular. We were tasked with picking an API that was useful and build a simple SPA that followed these requirements:
 
