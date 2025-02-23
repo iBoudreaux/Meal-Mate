@@ -49,10 +49,10 @@ The idea was to make a meal planner where users could search with the Spoontacul
 
 ## Website Theme
 Colors: 
-    * Background color of overall site: #31312E
-    * Color for logo, links, call to action items: #8BC34A
-    * Highlights, alerts, etc. : #FFA07A
-    * Color of text on background: #FFFFFF
+* Background color of overall site: #31312E
+* Color for logo, links, call to action items: #8BC34A
+* Highlights, alerts, etc. : #FFA07A
+* Color of text on background: #FFFFFF
 
 Text:
-    * Font: Montserrat is my beloved
+* Font: Montserrat is my beloved
