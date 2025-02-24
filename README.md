@@ -52,4 +52,15 @@ Colors:
 * Color of text on background: #FFFFFF
 
 Text:
+I'm using an import statement in my global styles.css from gogle fonts
 * Font: Montserrat is my beloved
+
+## API
+
+# [Spoontacular](https://spoonacular.com/food-api/docs)
+Spoontacular is a huge API that has a lot of the stuff that this project is trying to accomplish like making meals and such, but I just wanted to practice making my own meal planner and only utilize some of Spoontacular's resources. I decided to use the recipe and the food resource. 
+
+This API has tiers for what you can/can't use. I'm using the free tier and that's more than enough for what I need for a school assignment, but if this project were to expand or if there's anyone that uses this for something bigger, it'll cost more for more calls and for the amount of calls you can make in a time frame. The free tier I'm using here is 150 points per day, 1 call per second. They explain in their docs how their [quotas](https://spoonacular.com/food-api/docs#Quotas) work. 
+
+# Service
+I made a config/envi file for the api key for Spoontacular that get's called in the food-api.service.ts file. This service is used to call the api and has methods for what to do with that data we get back.  For the HttpClient service that angular provides needs a provider in the app.config file. All we're doing is returning what the api sends us. We then call those services in the components we need to display the data in. We also have two different calls in the service for the two different resources as of right now. 
