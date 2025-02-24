@@ -1,0 +1,5 @@
+<div id="meals-card-container">
+    @for (meal of meals; track $index) {
+        <app-meal-card [meal]="meal"></app-meal-card>
+    }
+</div>
