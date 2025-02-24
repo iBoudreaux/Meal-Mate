@@ -4,11 +4,11 @@
             type="text"
             placeholder="Search for meals"
             class="search-box"
-
-            
+            [value]="searchParam" 
+            (input)="onInputChange($event)"
         >
 
-        <button class="search-button">Search</button>
+        <button (click)="onSubmit()"  class="search-button">Search</button>
         
     </div>
 
