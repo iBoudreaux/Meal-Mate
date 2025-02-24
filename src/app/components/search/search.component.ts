@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-
+import { MealCardListComponent } from '../meal-card-list/meal-card-list.component';
+import { FoodCardListComponent } from '../food-card-list/food-card-list.component';
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [FoodCardListComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
