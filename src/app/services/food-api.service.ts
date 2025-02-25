@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CONFIG } from '../../config';
 
@@ -10,19 +10,44 @@ export class FoodApiService {
   //need the provider in the app.config 
   constructor(private client: HttpClient) { }
     private apiKey = CONFIG.spoonacularApiKey;
-    private baseFoodURL = 'https://api.spoonacular.com/food/ingredients/search';
-    private baseRecipeURL = '';
+    private searchTerm: string = '';
+    private baseFoodURL: string = 'https://api.spoonacular.com/food/ingredients/search';
+    private baseRecipeURL: string = '';
 
-  //i think what i want to do is have two different resource calls.
-  //One for food so a user can just pick food and add it to a meal
-  // Two one for recipes so theycna searc amonsgt recipes and just add it to a day
+
+  // This will generate a random letter that we use as the default for the default call for the API
+  // So, if the searchTerm is empty/null, it will pick a random letter and return a random list of ingredients
+  generateRandomLetter() {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
+  }
   
+  // This is the method to set the searchTerm to a random letter if empty or whatever the user asks for
+  setSearchTerm(newTerm: string): string {
+    if (this.searchTerm == '' || null) {
+      return this.searchTerm = this.generateRandomLetter();
+    } else {
+      return this.searchTerm = newTerm;
+
+    }
+  }
+
 
   getMeals(): Observable<any> {
     return this.client.get<any>(""); //enter the api call here
   }
 
+  //This method calls the API with params for the call
   getFoodItem(): Observable<any> {
-    return this.client.get<any>(`${this.baseFoodURL}/?query=apple&number=5&metaInformation=true&apiKey=${this.apiKey}`);
+    let params = new HttpParams()
+      .set('apiKey', this.apiKey)
+
+      // if there is a searchTerm, search and display it, if not call random letter and display that
+      .set('query', this.searchTerm || this.setSearchTerm('')) 
+      .set('number', '100')
+      .set('sortDirection', 'desc')
+      .set('metaInformation', 'true');
+
+      return this.client.get<any>(`${this.baseFoodURL}`, {params: params});
   }
 }

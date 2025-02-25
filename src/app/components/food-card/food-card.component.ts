@@ -11,6 +11,6 @@ export class FoodCardComponent {
 
 handleImageError(event: any) {
   console.error('Image failed to load:', event.target.src);
-  event.target.src = 'assets/placeholder-image.png'; // Path to a default placeholder image
+  event.target.src = 'assets/images/default-img.png'; // Path to a default placeholder image
 }
 }

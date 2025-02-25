@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
   homePageImage: string = 'assets/images/welcome-page-meal-img.png';
+
+  handleImageError(event: any) {
+    console.error('Image failed to load:', event.target.src);
+    event.target.src = 'assets/images/default-img.png'; // Path to a default placeholder image
+  }
 }

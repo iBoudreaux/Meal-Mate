@@ -1,0 +1,4 @@
+<div class="full-page-container">
+    <app-search (searchTermChange)="onSearch($event)"></app-search>
+    <app-food-card-list [searchTerm]="searchTerm"></app-food-card-list>
+</div>

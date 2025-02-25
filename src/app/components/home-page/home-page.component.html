@@ -6,6 +6,8 @@
         <button>Get Started</button>
     </div>
     <div class="right-side">
-        <img [src]="homePageImage" alt="Meal">
+        <img
+        (error)="handleImageError($event)" 
+        [src]="homePageImage" alt="Meal">
     </div>
 </div>

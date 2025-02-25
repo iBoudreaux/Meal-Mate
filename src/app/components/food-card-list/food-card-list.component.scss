@@ -1,0 +1,22 @@
+.food-card-list-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-y: auto;
+    max-height: 100vh;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+// i want to change the size of the aray shown and only show up to
+// four cards in a single row, row number dependent on api call me thinks

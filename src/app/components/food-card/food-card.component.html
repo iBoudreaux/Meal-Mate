@@ -3,6 +3,6 @@
     (error)="handleImageError($event)"
     [src]="'https://spoonacular.com/cdn/ingredients_250x250/' + foodItem.image"
     /> <!-- Image that comes from the api call -->
-    <h3>Name: {{foodItem.name}}</h3>  <!-- Name of the food item-->
-    <p>Aisle(s): {{foodItem.aisle}}</p>    <!--Aisle the food can be found in-->    
+    <h3>Name: {{foodItem.name ?? 'Name unavailabe or not provided'}}</h3>  <!-- Name of the food item-->
+    <p>Aisle(s): {{foodItem.aisle ?? 'Aisle unavailable or provided'}}</p>    <!--Aisle the food can be found in-->    
 </div>
